@@ -51,7 +51,7 @@ def generate_password(
     if has_symbols:
         if not has_uppercase:
             password = ""
-            while not any(char in symchoice for char in password):
+            while not any(char in symbols for char in password):
                 password = ""
                 if ignored_chars:
                     for c in ignored_chars:
@@ -75,7 +75,7 @@ def generate_password(
     if has_uppercase:
         if not has_symbols:
             password = ""
-            while not any(char in upchoice for char in password):
+            while not any(char in uppers for char in password):
                 password = ""
                 if ignored_chars:
                     for c in ignored_chars:
